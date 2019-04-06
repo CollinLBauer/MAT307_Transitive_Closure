@@ -79,9 +79,10 @@ class Testing(Scene):
         #Adds lines in based on if the corresponding vertices are connected to the same vertex
         #These loops are specifically for the adjacency squared
         #Note that the second loop starts at index i instead of 0, this is because the adjacency matrix will be equal to its transpose
-        #So we can completely ignore the bottom left half of the matrix when drawing new lines
+        #So we can completely ignore the bottom left half of the matrix when drawing new lines and the diagonal is all 0's, so it can be 
+        #ignored as well
         for i in range(len(adjacency2)):
-            for j in range(i,len(adjacency2[i])):
+            for j in range(i+1,len(adjacency2[i])):
                 if adjacency2[i][j] != 0:
                     line = Line(circles[i],circles[j])
                     self.add(line)
@@ -89,7 +90,7 @@ class Testing(Scene):
         self.wait()
 
         for i in range(len(bruhmoment)):
-            for j in range(i,len(bruhmoment[i])):
+            for j in range(i+1,len(bruhmoment[i])):
                 if bruhmoment[i][j] != 0:
                     line = Line(circles[i],circles[j])
                     self.add(line)  
@@ -97,7 +98,7 @@ class Testing(Scene):
         self.wait()
 
         for i in range(len(bruh)):
-            for j in range(i,len(bruh[i])):
+            for j in range(i+1,len(bruh[i])):
                 if bruh[i][j] != 0:
                     line = Line(circles[i],circles[j])
                     self.add(line)
