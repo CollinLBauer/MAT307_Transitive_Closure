@@ -1,11 +1,11 @@
 ##A lot of what is written here probably shouldn't be used for the final project
 ##I'm just planning on using it as a rough draft of sorts
 
+import sys
 
 import numpy as np
 import itertools as it
 from copy import deepcopy
-import sys
 import operator as op
 from random import sample
 
