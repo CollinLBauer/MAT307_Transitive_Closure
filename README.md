@@ -1,9 +1,10 @@
 # Transitive Closure Project
-MATH 307, Spring 2019
+Collin Bauer    Terence Carey
 
-Collin Bauer
+MATH 307 - Discrete Structures II
 
-Terence Carey
+College of Charleston, Spring 2019
+
 
 ## Project details
 This project simultates the transitive closure of a simple graph.
@@ -11,7 +12,9 @@ This project simultates the transitive closure of a simple graph.
 ### Running project code
 Code specific to this project is stored in src/manim/math307/
 
-To animate the project, cd into src/manim and run `python3 -m manim math307/project_name.py Scene_Name -pl`
+To animate the project, cd into src/manim and run `python3 -m manim math307/closure.py Closure -pl`
+
+closure will ask for an input file to select. Premade files can be found in src/graphs/
 
 
 ## manim
