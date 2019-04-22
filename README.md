@@ -7,7 +7,7 @@ College of Charleston, Spring 2019
 
 
 ## Project details
-This project simultates the transitive closure of a simple graph.
+This project simulates the transitive closure of a simple graph.
 
 ### Running project code
 Code specific to this project is stored in src/manim/math307/
