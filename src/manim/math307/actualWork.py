@@ -8,7 +8,7 @@ from random import sample
 from big_ol_pile_of_manim_imports import *
 
 
-class Closure(Scene):
+class LetterC(Scene):
         def construct(self):
             
 
@@ -106,7 +106,7 @@ class Closure(Scene):
                 oldLines = newLines
                 newLines = []
 
-                self.wait()
+                self.wait(0.5)
 
             
 
