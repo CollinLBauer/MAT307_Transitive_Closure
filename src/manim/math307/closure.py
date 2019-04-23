@@ -17,28 +17,29 @@ class Closure(Scene):
         self.vertLbls = []  # labels of each vertex; for building edges
         self.verts = []     # verticies, stored as 2D array of ints
         self.edges = []     # edges, stored as 2D array of vert labels
-        vertStr = "" # stores vertices from file
-        edgeStr = "" #stores edges from file
-        #vertices and edges must all be on same line
-        #vertices line must be labeled with 'v-'
-        #edge line must be labeled with 'e-'
+
+        vertStr = ""        # stores vertices from file
+        edgeStr = ""        # stores edges from file
+
+        # vertices and edges must all be on same line
+        # vertices line must be labeled with 'v-'
+        # edge line must be labeled with 'e-'
 
         for ln in inFile:
-#            print(ln)
+#            print(ln) #debug
             if len(ln) > 0:
                 if ln[0] == 'v' or ln[0] == 'V':
                     vertStr = ln
                 if ln[0] == 'e' or ln[0] == 'E':
                     edgeStr = ln
 
-#        vertLbls = []       
-#        verts = []          
+        # loop: build vertLbls[] and verts[]
         vertStr = vertStr[2:len(vertStr)-1].split(";")
 #        print(vertStr) #debug
         for i in range(len(vertStr)):
             self.vertLbls.append(vertStr[i][0])
 #            print(vert) #debug
-            for j in range(0,44):
+            for j in range(0,43):
                 char = chr(j)
                 vertStr[i] = vertStr[i].replace(char,"")
             for j in range (58,127):
@@ -50,7 +51,7 @@ class Closure(Scene):
                 vertStr[i][j] = eval(vertStr[i][j])
             self.verts.append(vertStr[i])
 
-            #loop: build edges[]
+        # loop: build edges[]
         edgeStr = edgeStr[2:len(edgeStr)-1].split(";")
 #        print(edgeStr) #debug
         for i in range((len(edgeStr))):
@@ -60,6 +61,7 @@ class Closure(Scene):
             edgeStr[i] = edgeStr[i].split(",")
 #            print(edgeStr[i]) #debug
             self.edges.append(edgeStr[i])
+        # graph built
 
 
 
