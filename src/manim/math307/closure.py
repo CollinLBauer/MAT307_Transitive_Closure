@@ -41,16 +41,13 @@ class Closure(Scene):
             for j in range(0,44):
                 char = chr(j)
                 vertStr[i] = vertStr[i].replace(char,"")
-            for j in range(46,48):
-                char = chr(j)
-                vertStr[i] = vertStr[i].replace(char,"")
             for j in range (58,127):
                 char = chr(j)
                 vertStr[i] = vertStr[i].replace(char,"")
             vertStr[i] = vertStr[i].split(",")
 #            print(vert) #debug
             for j in range(len(vertStr[i])):
-                vertStr[i][j] = int(vertStr[i][j])
+                vertStr[i][j] = eval(vertStr[i][j])
             self.verts.append(vertStr[i])
 
             #loop: build edges[]
