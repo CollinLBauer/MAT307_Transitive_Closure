@@ -1,6 +1,8 @@
-#Graphs are case sensitive.
+# Disjoint graph example
+# Note: Vertex labels are case sensitive.
+# Actually they could be almost any character, but that's dangerous.
 
 
-V-A(-2,-2);B(-3,-1);C(-6,0);D(-3,1);E(-2,2);F(-1,1);G(-0.5,0);H(-1,-1);a(2.25,-5/2);b(2.125,-4/2);c(2.25,-3/2);d(2.5,-2/2);e(3,-1/2);f(4,0);g(5,1/2);h(5.5,2/2);i(5.75,3/2);j(5.875,4/2);k(5.75,5/2)
+V-A(-2,-2);B(-3,-1);C(-3.5,0);D(-3,1);E(-2,2);F(-1,1);G(-0.5,0);H(-1,-1);a(1.25,-5/2);b(1.125,-4/2);c(1.25,-3/2);d(1.5,-2/2);e(2,-1/2);f(3,0);g(4,1/2);h(4.5,2/2);i(4.75,3/2);j(4.875,4/2);k(4.75,5/2)
 
 E-(A,B);(B,C);(C,D);(D,E);(E,F);(F,G);(G,H);(H,A);(a,b);(b,c);(c,d);(d,e);(e,f);(f,g);(g,h);(h,i);(i,j);(j,k)

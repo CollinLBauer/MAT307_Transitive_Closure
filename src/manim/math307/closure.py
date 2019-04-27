@@ -102,7 +102,7 @@ class Closure(Scene):
                         line = Line(circles[i],circles[j])
                         self.add(line)
 
-            self.wait(.25)
+            self.wait(1)
 
             #Creates an array that will store all of the adjacency matrices up to the power of n
             adjacencies = [adjacency]
@@ -140,7 +140,7 @@ class Closure(Scene):
                             line = Line(circles[j],circles[k], color = GREEN, DEFAULT_PIXEL_WIDTH=.05)
                             newLines.append(line)
                             
-                print(i/(len(adjacencies) - 1))
+                print("{:.2f}%".format(100*i/(len(adjacencies) - 1)))
 
                 for l in range(len(newLines)):
                     self.add(newLines[l])
@@ -162,7 +162,7 @@ class Closure(Scene):
                 newLines = []
 
                 
-                self.wait(.25)
+                self.wait(.33)
 
             
             closure = adjacencies[0]
